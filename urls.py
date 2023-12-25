@@ -47,6 +47,11 @@ urlpatterns = [
     path('deal_for_powerbi/', include('deal_for_powerbi.urls')),
     path('autocomplete_crm_tasks/', include('autocomplete_crm_tasks.urls')),
     path('move_tasks_deadline_js/', include('move_tasks_deadline_js.urls', 'move_tasks_deadline_js')),
-
+    path('api_test/', include('api_test.urls')),
+    path('call_upload/', include('call_upload.urls')),
+    path('duplicates/', include('duplicates_finder.urls')),
+    path('hierarchy/', include('employee_hierarchy.urls')),
+    path('run_bps/', include('run_bps.urls')),
+    path('catalog_to_excel/', include('catalog_to_excel.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

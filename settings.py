@@ -52,7 +52,13 @@ INSTALLED_APPS = [
     'tg_openai_bot',
     'deal_for_powerbi',
     'autocomplete_crm_tasks',
-    'move_tasks_deadline_js'
+    'move_tasks_deadline_js',
+    'api_test',
+    'call_upload',
+    'duplicates_finder',
+    'employee_hierarchy',
+    'run_bps',
+    'catalog_to_excel',
 ]
 
 MIDDLEWARE = [
