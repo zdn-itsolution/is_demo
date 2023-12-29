@@ -11,6 +11,7 @@ import wave
 from django.db import models
 
 import os
+from pathlib import Path
 
 
 class NumberChoicesType(models.IntegerChoices):
@@ -38,7 +39,7 @@ class CallInfo(models.Model):
                                       choices=NumberChoicesAddToChat.choices)
     call_id = models.CharField(max_length=255, null=True, blank=True)
 
-    inner_media_path = "rings/"
+    inner_media_path = "calls/"
     filename = ""
     file = models.FileField(upload_to=inner_media_path, null=True, blank=True)
     messages = models.TextField(blank=True, null=True)
@@ -64,7 +65,8 @@ class CallInfo(models.Model):
 
         self.call_id = res['result']['CALL_ID']
         self.duration = int(MP3(self.file).info.length)
-        self.filename = str(self.file)[len(self.inner_media_path):-len(os.path.splitext(str(self.file))[-1])]
+        # self.filename = str(self.file)[len(self.inner_media_path):-len(os.path.splitext(str(self.file))[-1])]
+        self.filename = Path(str(self.file)).stem
 
         self.save()
 

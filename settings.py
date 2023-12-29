@@ -53,12 +53,14 @@ INSTALLED_APPS = [
     'deal_for_powerbi',
     'autocomplete_crm_tasks',
     'move_tasks_deadline_js',
-    'api_test',
-    'call_upload',
-    'duplicates_finder',
-    'employee_hierarchy',
-    'run_bps',
+    #'api_test',
+    #'call_upload',
+    #'duplicates_finder',
+    #'employee_hierarchy',
+    #'run_bps',
     'catalog_to_excel',
+    'upload_from_google',
+    'iframe_test',
 ]
 
 MIDDLEWARE = [

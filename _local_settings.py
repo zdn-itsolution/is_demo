@@ -25,7 +25,7 @@ APP_SETTINGS = LocalSettingsClass(
     application_index_path='/',
 )
 
-DOMAIN = "56218ef983f3-8301993767665431593.ngrok-free.app"
+#DOMAIN = "56218ef983f3-8301993767665431593.ngrok-free.app"
 
 
 DATABASES = {
